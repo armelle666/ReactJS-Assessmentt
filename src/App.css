@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css2?family=Port+Lligat+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@500&family=Fira+Sans:ital,wght@0,300;1,400&display=swap);
+
+body {
+  background: #0C2D48;
+  /* min-height: 100vh; */
+  justify-content: center;
+  align-items: center;
+}
+
+.container { 
+  justify-content: space-between;
+  /* align-items: stretch; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  align-content: center;
+
+  width: 100%;
+  margin: 3.2rem auto 0 auto;
+}
+
+h1 {
+  color: #b4ecff
+}
+
+h2, h5 {
+  color: #145DA0;
+}
+
+h1, h2, h3, h5 {
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+
+
+/* FORM CSS */
+
+form {
+  background-color: white;
+  border-radius: 10px;
+  margin: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  float: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.form-group {
+  /* flex-basis: 45%; */
+  /* width: ; */
+  background-color: white;
+  flex: 1;
+}
+
+@media(min-width: 576px){
+  .container {
+    max-width: 300px;
+  }
+
+  input {
+    max-width: 200px;
+  }
+}
+
+@media(min-width: 768px){
+  .container{
+    max-width: 600px
+  }
+
+  input {
+    max-width: 400px;
+  }
+}
+
+label {
+  /* display: inline-block;
+  padding: 2px 3px; */
+  /* text-align: left; */
+  /* vertical-align: top ; */
+  color: #145DA0;
+  font-weight: 600;
+  display: inline-block;
+  width: 75px;
+  text-align: left;
+  margin: 1em;
+  font-family: 'Port Lligat Sans', sans-serif;
+  font-size: small;
+  background-color: white;
+}
+
+input { 
+  margin: 3px;
+  padding: 6px;
+  border: 1px solid rgb(105, 122, 145);
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  /* resize: vertical; */
+}
+
+/* input#first, input#last {
+  width: 35%;
+  display: inline-flex;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.text-danger {
+  color: red;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* BUTTON CSS */
+
+.form-actions {
+  padding: 30px 150px; 
+  overflow: hidden; /* for clearfix */
+}
+
+/* button#submit {
+  display: block;
+} */
+
+button#submit {
+  background-color: #30b2d3;
+  color: rgb(32, 70, 121);
+  font-weight: 900;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  float: center;
+}
+
+button#submit:hover {
+  background-color: #8fcfc1;
+  color: white;
+}
+
+
+
+
+/* OUTPUT LIST */
+
+div#table {
+  background-color: white;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 2em;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  float: center;
+}
+
+h2 {
+  width: 100%;
+  background-color: white;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+div#sample {
+  background-color: white;
+  max-height: auto;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+div#datable {
+  background-color: white;
+}
