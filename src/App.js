@@ -1,11 +1,9 @@
-import React from "react";
+import React from "react";
 
 import "./App.css";
 import sample from "./sample";
 import ApiDataList from "./apiCatcher";
 
-
-const emailValid = new RegExp(/\S+@\S+\.\S+/); //email format
 const bdateValid = new RegExp(
   /^((0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](19|20)?[0-9]{2})*$/
 ); //date format
@@ -66,7 +64,7 @@ class App extends React.Component {
     }
   }
 
-  validate() {
+  validate() { // makes sure all fields have input
     let inputs = this.state.inputs;
     let input = this.state.input;
     let errors = {};
@@ -86,13 +84,6 @@ class App extends React.Component {
       isValid = false;
       errors["email"] = "This is a required field.";
     }
-
-    // if (input["email"] !== "undefined") {
-    //   if (!emailValid.test(input["email"])) {
-    //     isValid = false;
-    //     errors["email"] = "Please enter a valid email address.";
-    //   }
-    // }
 
     if (!input["eid"]) {
       isValid = false;
@@ -121,12 +112,10 @@ class App extends React.Component {
   newEntry() {
     let entry = Object.assign(this.state.inputs, this.state.input);
 
-    newEntry.push(...newEntry, entry)
+    newEntry.push(entry)
     console.log(newEntry);
 
     this.setState({newEntry: newEntry})
-
-    // this.resetEntry();    
   }
 
   resetEntry() {
@@ -179,7 +168,7 @@ class App extends React.Component {
           <div className="form-group">
             <label>Email:</label>
             <input
-              type="text"
+              type="email"
               name="email"
               value={this.state.input.email}
               onChange={this.handleChange}
@@ -201,7 +190,6 @@ class App extends React.Component {
               autoComplete="off"
               placeholder="12345678"
               className="form-control"
-              maxLength={8}
             />
 
             <div className="text-danger">{this.state.errors.eid}</div>
@@ -230,7 +218,7 @@ class App extends React.Component {
         <div id="table">
           <h2>Employee List</h2>
           <hr/>
-          <h5>JSON file</h5>
+          {/* <h5>JSON file</h5> */}
           <div id="sample">
             {newEntry.map((emp) => (
                 <div id="datable" key={emp.eid}>
